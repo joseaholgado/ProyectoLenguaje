@@ -9,18 +9,18 @@ header {
     margin: 10px 30%;
     font-style: italic;
     text-align: center;
-    background-color: #A85F11;
+    background-color: #41280e;
     color: rgb(238, 231, 240);
     
 }
 
 h1{
-    color: #f0eef3;
+    color: black;
     text-align:center;  
 }
 h2{
     text-align: center;
-    color: rgb(255, 251, 31);
+    color: rgb(107, 78, 144);
 }
 h3::before{
     counter-increment: estrofa;
@@ -29,14 +29,14 @@ h3::before{
 
 h3{
     text-align: center;
-    color: blue;
+    color: rgb(2, 2, 88);
 }
 p{
     text-align: center;
-    color:aliceblue;
+    color:rgb(68, 82, 0);
 }
 span{
-    color: yellow;
+    color: rgb(85, 77, 0);
     font-size: italic;
     font-family:Arial, Helvetica, sans-serif;
     text-align: center;
