@@ -52,9 +52,9 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url("Imagen_Inicio.jpg");
+    background-image: url("malaga.png");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-position: center;
     height: 50vh;
     margin-bottom: 50vh;
@@ -90,10 +90,10 @@ nav a:hover {
 
 section{
 margin-top: 2%;
-margin-left:30% ;
-height: 17%;
+margin-left:50% ;
+height: 140%;
 }
 iframe{
-    width: 60%;
-    height: 900%
+    width: 80%;
+    height: 120%
 }

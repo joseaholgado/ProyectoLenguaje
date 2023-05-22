@@ -1,7 +1,7 @@
 body{
     width: 85%;
     margin: 0 auto; 
-    background-color: rgb(5, 180, 250);
+    background-image: url("./escudo.jpg");
     counter-reset: estrofa verso;
 }
 
