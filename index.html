@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Proyecto Final</title>
+    <link rel="stylesheet" href="./estilos.css" />
+</head>
+
+<body id="todo">
+    <nav id="barraNav">
+        <a href="./index.html">
+            <h3>Indice del sitio</h3>
+        </a>
+        <a href="./3EnRayas.html">
+            <h3>Un Juego</h3>
+        </a>
+        <a href="" onclick="mostrarAlerta()">
+            <h3>Más Información</h3>
+        </a>
+        <a href="./configuración.html">
+            <h3>Configuración</h3>
+            </a>
+        <a href="xml.html">
+            <h3>XML</h3> 
+        </a>
+            
+    </nav>
+    <section>
+         <!--Mostramos el boton-->
+        <input id="mostrar-modal" name="modal" type="radio" /> 
+        <label for="mostrar-modal"> Pulsame </label>
+
+        <div id="modal">     
+            <p> Jose Antonio Holgado Bonet: <a href="https://www.letras.com/nach/1270076/" target="_blank" Cancion><sub><u>Enlace a la cancion de Nach</u></sub> </a></p>
+        </div>
+
+        <!--Mostramos el boton de la x para salir del modal-->
+        <input id="cerrar-modal" name="modal" type="radio" /> 
+        <label for="cerrar-modal"> X </label> 
+    </section>
+    
+    <div id="zonaModo">
+        <img id="noche" src="./luna.png" onclick="ponerModoNoche()">
+        <img id="dia" src="./sol2.png" onclick="ponerModoDia()">
+        
+        <!-- Esta zona es donde se visualizan los iconos
+        de cambio de modo (sol y luna).
+        Y queda siempre pegada al viewport, visible -->
+
+    </div>
+
+    <script src="./modoNoche.js">  </script>
+</body>
+
+
+</html>

@@ -1,0 +1,98 @@
+:root {
+    --colorFondo: yellow;
+    --colorFuente: green;
+    --colorFuenteDia: black;
+    --colorFondoDia: gainsboro;
+    --colorFuenteNoche: white;
+    --colorFondoNoche: darkgray;
+    --anchoIconoModo: 50px;
+    --modoGuardado: dia;
+    --colorNormal: black;
+    font-size: 1rem;
+}
+
+#todo {
+    color: var(--colorFuente);
+
+    background-color: var(--colorFondo);
+}
+
+#zonaModo {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: var(--anchoIconoModo);
+    background-color: transparent;
+}
+
+#dia,
+#noche {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+mark,
+span {
+    background-color: var(--colorFondo);
+}
+
+p,
+h1,
+h2,
+h3 {
+
+    color: var(--colorNormal);
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url("Imagen_Inicio.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    height: 50vh;
+    margin-bottom: 50vh;
+}
+
+nav {
+    width: 100%;
+    background-color: var(--colorFondoDia);
+    text-align: center;
+    padding: 0px;
+    box-shadow: 0 2px 4px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    padding: 10px;
+    color: var(--colorFuenteDia);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background-color: var(--colorFondo);
+    color: var(--colorFuente);
+}
+
+iframe{
+    width: 80vh;
+    height: 80vw;
+    margin-left: 30vw;
+    
+        
+
+}

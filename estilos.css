@@ -1,0 +1,193 @@
+:root {
+    --colorFondo: yellow;
+    --colorFuente: green;
+    --colorFuenteDia: black;
+    --colorFondoDia: gainsboro;
+    --colorFuenteNoche: white;
+    --colorFondoNoche: darkgray;
+    --anchoIconoModo: 50px;
+    --modoGuardado: dia;
+    --colorNormal: black;
+    font-size: 1rem;
+}
+
+#todo {
+    color: var(--colorFuente);
+
+    background-color: var(--colorFondo);
+}
+
+#zonaModo {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: var(--anchoIconoModo);
+    background-color: transparent;
+}
+
+#dia,
+#noche {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+mark,
+span {
+    background-color: var(--colorFondo);
+}
+
+p,
+h1,
+h2,
+h3 {
+
+    color: var(--colorNormal);
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url("Imagen_Inicio.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    height: 50vh;
+    margin-bottom: 50vh;
+}
+
+nav {
+    width: 100%;
+    background-color: var(--colorFondoDia);
+    text-align: center;
+    padding: 0px;
+    box-shadow: 0 2px 4px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    padding: 10px;
+    color: var(--colorFuenteDia);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background-color: var(--colorFondo);
+    color: var(--colorFuente);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  #mostrar-modal + label {
+    /* Añade los estilo al modal */
+    display: table;
+    margin: auto;
+    color: #fff;
+    line-height: 3;
+    padding: 0 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 60%;
+  }
+
+  /* Aqui centramos el texto y agrandamos letras*/
+  #modal p {
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    font-size: 1.5em;
+    text-align: center;
+    
+  }
+  /* Aqui lo ocultamos todo lo anterior*/
+  #modal {
+    background: rgba(67, 221, 75, 0.9);
+    color: #e70808;
+    position: fixed;
+    top: -100vh;/*Esto me aparece la ventana emergente*/
+    left: 150px;
+    height: 80vh;
+    width: 80vw;
+    transition: all .5s;
+    
+  }
+  /* Ampliacion, color, centrado del boton 'PULSAME'*/
+  #mostrar-modal {
+    display: none;
+  }
+  #mostrar-modal + label {
+    
+    background: rgb(161, 14, 247);
+    display: table;
+    margin: auto;
+    color: #fff;
+    line-height: 3;
+    padding: 0 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 60%;
+  }
+  #mostrar-modal + label:hover {
+    background: #38678f;
+  }
+/*La seudoclase :checked se activa al hacer clic en un input (radio o checkbox).*/
+#mostrar-modal:checked ~ #modal {
+    top: 0;
+  }
+  /*Diseño del segundo boton */
+  #cerrar-modal {
+    display: none;
+  }
+  #cerrar-modal + label {
+    position: absolute;
+    top: 1em;
+    right: 140px;
+    z-index: 100;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    background: tomato;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .5s;
+  }
+/*para que el modal se oculte al tener el botón con el estado :checked.*/
+  #cerrar-modal:checked ~ #modal {
+    top: -100vh;
+  }
+  /*Mejoramos el codigo del boton x*/
+  #cerrar-modal + label {
+    display: none;
+  }
+  #mostrar-modal:checked ~ #cerrar-modal + label {
+    display: block;
+  }
+  #cerrar-modal:checked + label {
+    display: none;
+  }

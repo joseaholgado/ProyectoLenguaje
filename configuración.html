@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modos dia/noche con javascript</title>
+    <link rel="stylesheet" href="./estilosModoNoche.css"/>
+</head>
+
+<body id="todo">
+        
+    <nav id="barraNav">
+        <a href="./index.html">
+            <h3>Indice del sitio</h3>
+        </a>
+        <a href="./3EnRayas.html">
+            <h3>Un Juego</h3>
+        </a>
+        <a href="" onclick="mostrarAlerta()">
+            <h3>Más Información</h3>
+        </a>
+        <a href="./configuración.html">
+            <h3>Configuración</h3>
+            </a>
+            
+    </nav>
+
+    <section id="ajustes">
+        
+        <p id="esteParrafo">Elija un Color</p>
+        <input type="color" name="colorElegido" />
+        <br />
+
+        <p>Elija la fuente base del documento</p>
+        <select name="tamFuente">
+            <option value="0.8">Pequeña</option>
+            <option value="1.0" selected="selected">Mediana</option>
+            <option value="1.4">Grande</option>
+        </select>
+
+        <button type="button" onclick="aplicarCambios()">APLICAR</button>
+        <p>Elija un cursor para cambiar</p>
+        <select name="camRaton">
+            <option value="crosshair">Puntero</option>
+            <option value="default" selected="selected">Flecha</option>
+            <option value="no-drop">Prohibido</option>
+        </select>
+       
+        
+            <p id="mensaje"></p>
+    </section>
+   
+    <div id="zonaModo">
+        <img id="noche" src="./luna.png" onclick="ponerModoNoche()">
+        <img id="dia" src="./sol2.png" onclick="ponerModoDia()">
+        
+        <!-- Esta zona es donde se visualizan los iconos
+        de cambio de modo (sol y luna).
+        Y queda siempre pegada al viewport, visible -->
+
+    </div>
+
+  
+    <script src="./modoNoche.js"></script>
+    
+
+</body>
+</html>

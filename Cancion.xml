@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="Cancion.xsl"?>
+<Cancion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./Cancionxsd.xsd">
+	<artista>Autor: Ultras Málaga</artista>
+	<album>Album: Frente Boquerón</album>
+	<fechaLanzamiento>Fecha: 2002</fechaLanzamiento>
+	<género>Género: pop indio, pop, rock español</género>
+		
+	<estrofa>
+
+		<verso>Málaga La Bombonera</verso>
+		<verso>Flor de la Costa del Sol</verso>
+		<verso>Tiene equipo de Primera</verso>
+		<verso>En el fútbol español</verso>
+		<verso>Vamos a La Rosaleda</verso>
+		<verso>Es campo internacional</verso>
+		<verso>La afición jamás se queda</verso>
+		<verso>Con nosotros no hay quien pueda</verso>
+		<verso>El Málaga va a jugar</verso>
+	</estrofa>
+	
+	<estrofa>
+		<verso>Colores blanquiazules</verso>
+		<verso>Jugando con tesón</verso>
+		<verso>Poner en el partido</verso>
+		<verso>Coraje y corazón</verso>
+		<verso>Luchando con firmeza</verso>
+		<verso>Serás el triunfador</verso>
+		<verso>Por eso con sus gritos</verso>
+		<verso>Te anima la afición</verso>
+	</estrofa>
+	
+	<estrofa>
+		<verso>Sin orgullo cuando gana</verso>
+		<verso>Cuando pierde sin rencor</verso>
+		<verso>Entre la afición más sana</verso>
+		<verso>El Málaga es campeón</verso>
+		<verso>Adelante jugadores</verso>
+		<verso>Por el triunfo frente al gol</verso>
+		<verso>Del deporte defensores</verso>
+		<verso>Malagueños y señores</verso>
+		<verso>En el fútbol español</verso>
+	</estrofa>
+	
+	<estrofa>
+		<verso>Colores blanquiazules</verso>
+		<verso>Jugando con tesón</verso>
+		<verso>Poner en el partido</verso>
+		<verso>Coraje y corazón</verso>
+		<verso> con firmeza</verso>
+		<verso>Serás el triunfador</verso>
+		<verso> eso con sus gritos</verso>
+		<verso>Te anima la afición</verso>
+		<verso tipo="malaga" >¡¡ MÁ - LA - GA!!</verso>
+	</estrofa>
+</Cancion>
