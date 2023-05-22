@@ -88,11 +88,12 @@ nav a:hover {
     color: var(--colorFuente);
 }
 
+section{
+margin-top: 2%;
+margin-left:30% ;
+height: 17%;
+}
 iframe{
-    width: 80vh;
-    height: 80vw;
-    margin-left: 30vw;
-    
-        
-
+    width: 60%;
+    height: 900%
 }
