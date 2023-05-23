@@ -20,7 +20,7 @@ h1{
 }
 h2{
     text-align: center;
-    color: rgb(52, 3, 116);
+    color: black;
 }
 h3::before{
     counter-increment: estrofa;
@@ -29,14 +29,14 @@ h3::before{
 
 h3{
     text-align: center;
-    color: rgb(2, 2, 88);
+    color: black;
 }
 p{
     text-align: center;
-    color:rgb(70, 6, 0);
+    color:black;
 }
 span{
-    color: rgb(87, 1, 1);
+    color: black;
     font-size: italic;
     font-family:Arial, Helvetica, sans-serif;
     text-align: center;

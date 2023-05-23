@@ -54,7 +54,7 @@ body {
     height: 100vh;
     background-image: url("Imagen_Inicio.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-position: center;
     height: 50vh;
     margin-bottom: 50vh;
@@ -191,3 +191,14 @@ section {
   #cerrar-modal:checked + label {
     display: none;
   }
+
+  #nombre-usuario {
+    position: fixed;
+    bottom: 10px; /* Puedes ajustar la posición según tus necesidades */
+    right: 10px; /* Puedes ajustar la posición según tus necesidades */
+    background-color: orange;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 9999; /* Asegura que el elemento esté en el frente de otros elementos */
+  }
+  

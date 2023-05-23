@@ -100,20 +100,46 @@ function aplicarCambios() {
     localStorage.setItem('camRaton',puntero );
 }
 
+function miNombre(){
+    var nombre=(prompt("Dime tu nombre"));
+    
 
-function Restaurar(){
+    var nombreUsuarioDiv = document.getElementById('nombre-usuario');
+    if (nombre !== "") {
+        nombreUsuarioDiv.textContent = nombre;
+        localStorage.setItem("nombre-usuario",nombre);
+    } else {
+        nombreUsuarioDiv.textContent = "Sin identificar";    
+    }
+
+    
+}
+function Restaurar() {
     var colorElegido = localStorage.getItem('colorElegido');
     var tamElegido = localStorage.getItem('tamElegido');
+    var camRatonElejido = localStorage.getItem('camRaton');
+    var nombreGuardado = localStorage.getItem("nombre-usuario");
+    
+    document.getElementById("todo").style.cursor = camRatonElejido;
+
+    var nombreUsuarioDiv = document.getElementById('nombre-usuario');
+    var nombreUsuarioDiv = document.getElementById('nombre-usuario');
+    if (nombreGuardado !== null) {
+    nombreUsuarioDiv.textContent = nombreGuardado;
+    } else {
+    nombreUsuarioDiv.textContent = 'Sin identificar';
+    }
+    localStorage.setItem("nombre-usuario", nombreGuardado); 
+
 
     if (colorElegido && tamElegido) {
         document.documentElement.style.fontSize = parseFloat(tamElegido) + "rem";
         document.documentElement.style.setProperty("--colorNormal", colorElegido);
-        document.getElementsByName('colorElegido')[0].value = colorElegido;
-        document.getElementsByName('tamFuente')[0].value = tamElegido;
+        
     }
-    var camRatonElejido = localStorage.getItem('camRaton');
-    document.getElementById("todo").style.cursor = camRatonElejido;
- 
+
+   
 }
+
 
 Restaurar();
