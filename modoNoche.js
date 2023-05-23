@@ -13,6 +13,9 @@ if (modo=="dia") {
     ponerModoNoche();
 }
 
+function mostrarAlerta() {
+    alert("Nombre del alumno: Jose Antonio Holgado Bonet\nCurso: 1DAW\nTema elegido de Proyecto Final de Curso");
+  }
 
 function leerModoActual() {    
     let modo = window.localStorage.getItem("--modoGuardado");
@@ -101,16 +104,18 @@ function aplicarCambios() {
 }
 
 function miNombre(){
-    var nombre=(prompt("Dime tu nombre"));
-    
+    //var nombre=(prompt("Dime tu nombre"));
+    var nombre2=document.getElementById('fname').value;
 
     var nombreUsuarioDiv = document.getElementById('nombre-usuario');
-    if (nombre !== "") {
-        nombreUsuarioDiv.textContent = nombre;
-        localStorage.setItem("nombre-usuario",nombre);
+    if (nombre2 !== "") {
+        nombreUsuarioDiv.textContent = nombre2;
+        localStorage.setItem("nombre-usuario",nombre2);
     } else {
-        nombreUsuarioDiv.textContent = "Sin identificar";    
+        nombreGuardado="Sin identificar";
+        nombreUsuarioDiv.textContent = nombreGuardado;    
     }
+    localStorage.setItem("nombre-usuario", nombreGuardado); 
 
     
 }
@@ -123,11 +128,12 @@ function Restaurar() {
     document.getElementById("todo").style.cursor = camRatonElejido;
 
     var nombreUsuarioDiv = document.getElementById('nombre-usuario');
-    var nombreUsuarioDiv = document.getElementById('nombre-usuario');
+   
     if (nombreGuardado !== null) {
     nombreUsuarioDiv.textContent = nombreGuardado;
     } else {
-    nombreUsuarioDiv.textContent = 'Sin identificar';
+        nombreGuardado="Sin identificar";
+    nombreUsuarioDiv.textContent = nombreGuardado;
     }
     localStorage.setItem("nombre-usuario", nombreGuardado); 
 
