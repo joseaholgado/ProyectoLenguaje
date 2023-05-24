@@ -1,6 +1,6 @@
-body{
+body {
     width: 85%;
-    margin: 0 auto; 
+    margin: 0 auto;
     background-image: url("./escudo2.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -10,46 +10,45 @@ body{
 header {
     margin: 10px 30%;
     font-style: italic;
-    font-size: 1em;
+
     text-align: center;
-    background-color: #003399; 
-    color: #FFF; 
+    background-color: #003399;
+    color: #FFF;
 }
 
 h1 {
-    color: #003399; 
-    font-size: 1em;
-    text-align: center;  
+    color: #003399;
+
+    text-align: center;
 }
 
 h2 {
     text-align: center;
-    font-size: 1em;
-    color: #003399; 
+
+    color: #003399;
 }
 
 h3::before {
     counter-increment: estrofa;
-    font-size: 1em;
+
     content: "" counter(estrofa) ": ";
 }
 
 h3 {
     text-align: center;
-    font-size: 1em;
-    color: #003399; 
+
+    color: #003399;
 }
 
 p {
     text-align: center;
-    font-size: 1em;
-    color: #dfe2e8; 
+
+    color: #dfe2e8;
 }
 
 span {
-    color: #819d04; 
+    color: #819d04;
     font-size: italic;
-    font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
