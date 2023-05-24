@@ -1,83 +1,65 @@
-// código para manejar el modo dia y noche
-
-/* añadir aquí lo siguiente:
-  leer todas las variables guardadas en localStorage
-  especialmente la variable --modoInicial
-
-*/
-
+// Leer todas las variables guardadas en localStorage, especialmente la variable --modoInicial
 var modo = leerModoActual();
-if (modo=="dia") {
-    ponerModoDia();    
+if (modo == "dia") {
+    ponerModoDia();
 } else {
     ponerModoNoche();
 }
 
+// Función para mostrar una alerta con información del alumno
 function mostrarAlerta() {
     alert("Nombre del alumno: Jose Antonio Holgado Bonet\nCurso: 1DAW\nTema elegido de Proyecto Final de Curso");
-  }
+}
 
-function leerModoActual() {    
+// Función para leer el modo actual desde localStorage
+function leerModoActual() {
     let modo = window.localStorage.getItem("--modoGuardado");
     if (!modo) {
-        // devolverá modo DIA si no hay modo guardado
-        /* 
-        leer el --modoGuardado de nuestro CSS original
-                */
-
-        modo=document.documentElement.style.getPropertyValue("--modoGuardado");
-        // modo = getComputedStyle(document.documentElement).getPropertyValue('--modoGuardado');
-
-
-    };
+        // Si no hay modo guardado, leemos el valor de --modoGuardado del CSS original
+        modo = document.documentElement.style.getPropertyValue("--modoGuardado");
+    }
     return modo;
 }
 
+// Función para aplicar el modo "Día"
 function ponerModoDia() {
-
-    // ponemos letra oscura sobre fondo blanco
+    // Ponemos letra oscura sobre fondo blanco
     var nav = document.getElementById('barraNav');
     nav.style.backgroundColor = "white";
-    let todo=document.getElementById("todo");
-    todo.style.color="black";
-    todo.style.backgroundColor="white";
-    window.localStorage.setItem("--modoGuardado","dia");
+    let todo = document.getElementById("todo");
+    todo.style.color = "black";
+    todo.style.backgroundColor = "white";
+    window.localStorage.setItem("--modoGuardado", "dia");
 
-    // ocultamos el sol
+    // Ocultamos el sol
     let iconoDia = document.getElementById("dia");
-    iconoDia.style.display="none";
+    iconoDia.style.display = "none";
 
-    // mostramos la luna
+    // Mostramos la luna
     let iconoNoche = document.getElementById("noche");
-    iconoNoche.style.display="block";
-    
-   //Cambiamos en nav
-   
-    
-
+    iconoNoche.style.display = "block";
 }
 
-
+// Función para aplicar el modo "Noche"
 function ponerModoNoche() {
-
-    // ponemos letra clara sobre fondo oscuro
+    // Ponemos letra clara sobre fondo oscuro
     var nav = document.getElementById('barraNav');
     nav.style.backgroundColor = "black";
-    let todo=document.getElementById("todo");
-    todo.style.color="white";
-    todo.style.backgroundColor="black";
-    window.localStorage.setItem("--modoGuardado","noche");
+    let todo = document.getElementById("todo");
+    todo.style.color = "white";
+    todo.style.backgroundColor = "black";
+    window.localStorage.setItem("--modoGuardado", "noche");
 
-    // mostramos el sol
+    // Mostramos el sol
     let iconoDia = document.getElementById("dia");
-    iconoDia.style.display="block";
+    iconoDia.style.display = "block";
 
-    // ocultamos la luna
+    // Ocultamos la luna
     let iconoNoche = document.getElementById("noche");
-    iconoNoche.style.display="none";
-    
-    
+    iconoNoche.style.display = "none";
 }
+
+// Función para aplicar los cambios seleccionados por el usuario
 function aplicarCambios() {
     var color = document.getElementsByName('colorElegido')[0];
     var tam = document.getElementsByName('tamFuente')[0];
@@ -94,58 +76,56 @@ function aplicarCambios() {
     document.documentElement.style.setProperty("--colorNormal", colorElegido);
     document.getElementById('mensaje').innerHTML = "APLICADO";
 
-    //aplicar raton
+    // Aplicar el cambio de cursor
     var cam = document.getElementsByName('camRaton')[0];
-    var puntero= cam[cam.selectedIndex].value;
+    var puntero = cam[cam.selectedIndex].value;
     document.getElementById("todo").style.cursor = puntero;
 
-    //Guardar los ajustes en localStorage
-    localStorage.setItem('camRaton',puntero );
+    // Guardar los ajustes en localStorage
+    localStorage.setItem('camRaton', puntero);
 }
 
-function miNombre(){
-    //var nombre=(prompt("Dime tu nombre"));
-    var nombre2=document.getElementById('fname').value;
+// Función para manejar el nombre del usuario
+function miNombre() {
+    var nombre2 = document.getElementById('fname').value;
 
     var nombreUsuarioDiv = document.getElementById('nombre-usuario');
     if (nombre2 !== "") {
         nombreUsuarioDiv.textContent = nombre2;
-        localStorage.setItem("nombre-usuario",nombre2);
+        localStorage.setItem("nombre-usuario", nombre2);
     } else {
-        nombreGuardado="Sin identificar";
-        nombreUsuarioDiv.textContent = nombreGuardado;    
+        nombreGuardado = "Sin identificar";
+        nombreUsuarioDiv.textContent = nombreGuardado;
     }
-    localStorage.setItem("nombre-usuario", nombreGuardado); 
-
-    
+    localStorage.setItem("nombre-usuario", nombreGuardado);
 }
+
+// Función para restaurar los ajustes guardados en localStorage
 function Restaurar() {
     var colorElegido = localStorage.getItem('colorElegido');
     var tamElegido = localStorage.getItem('tamElegido');
     var camRatonElejido = localStorage.getItem('camRaton');
     var nombreGuardado = localStorage.getItem("nombre-usuario");
-    
+
+    // Restaurar el cursor
     document.getElementById("todo").style.cursor = camRatonElejido;
 
     var nombreUsuarioDiv = document.getElementById('nombre-usuario');
-   
-    if (nombreGuardado !== null) {
-    nombreUsuarioDiv.textContent = nombreGuardado;
-    } else {
-        nombreGuardado="Sin identificar";
-    nombreUsuarioDiv.textContent = nombreGuardado;
-    }
-    localStorage.setItem("nombre-usuario", nombreGuardado); 
 
+    if (nombreGuardado !== null) {
+        nombreUsuarioDiv.textContent = nombreGuardado;
+    } else {
+        nombreGuardado = "Sin identificar";
+        nombreUsuarioDiv.textContent = nombreGuardado;
+    }
+    localStorage.setItem("nombre-usuario", nombreGuardado);
 
     if (colorElegido && tamElegido) {
+        // Restaurar los ajustes de fuente y color
         document.documentElement.style.fontSize = parseFloat(tamElegido) + "rem";
         document.documentElement.style.setProperty("--colorNormal", colorElegido);
-        
     }
-
-   
 }
 
-
+// Restaurar los ajustes al cargar la página
 Restaurar();
