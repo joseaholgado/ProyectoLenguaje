@@ -97,3 +97,96 @@ nav a:hover {
     border-radius: 5px;
     z-index: 9999; /* Asegura que el elemento esté en el frente de otros elementos */
   }
+  /* Aqui centramos el texto y agrandamos letras*/
+  #modal p {
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    font-size: 1.5em;
+    text-align: center;
+    
+  }
+  /* Aqui lo ocultamos todo lo anterior*/
+  #modal {
+    background: rgba(67, 221, 75, 0.9);
+    color: #e70808;
+    position: fixed;
+    top: -100vh;/*Esto me aparece la ventana emergente*/
+    left: 150px;
+    height: 80vh;
+    width: 80vw;
+    transition: all .5s;
+    
+  }
+  /* Ampliacion, color, centrado del boton 'PULSAME'*/
+  #mostrar-modal {
+    display: none;
+  }
+  
+  #mostrar-modal + label {
+    
+    background: rgb(161, 14, 247);
+    display: table;
+    color: #fff;
+    line-height: 3;
+    padding: 0 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 60%;
+  }
+  #mostrar-modal + label:hover {
+    background: #38678f;
+  }
+/*La seudoclase :checked se activa al hacer clic en un input (radio o checkbox).*/
+#mostrar-modal:checked ~ #modal {
+    top: 0;
+  }
+  /*Diseño del segundo boton */
+  #cerrar-modal {
+    display: none;
+  }
+  #cerrar-modal + label {
+    position: absolute;
+    top: 1em;
+    right: 140px;
+    z-index: 100;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    background: tomato;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .5s;
+  }
+/*para que el modal se oculte al tener el botón con el estado :checked.*/
+  #cerrar-modal:checked ~ #modal {
+    top: -100vh;
+  }
+  /*Mejoramos el codigo del boton x*/
+  #cerrar-modal + label {
+    display: none;
+  }
+  #mostrar-modal:checked ~ #cerrar-modal + label {
+    display: block;
+  }
+  #cerrar-modal:checked + label {
+    display: none;
+  }
+
+  #nombre-usuario {
+    position: fixed;
+    bottom: 10px; /* Puedes ajustar la posición según tus necesidades */
+    right: 10px; /* Puedes ajustar la posición según tus necesidades */
+    background-color: orange;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 9999; /* Asegura que el elemento esté en el frente de otros elementos */
+  }

@@ -96,17 +96,7 @@ section {
     width: 100%;
   }
   
-  #mostrar-modal + label {
-    /* Añade los estilo al modal */
-    display: table;
-    margin: auto;
-    color: #fff;
-    line-height: 3;
-    padding: 0 1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 60%;
-  }
+  
 
   /* Aqui centramos el texto y agrandamos letras*/
   #modal p {
@@ -138,11 +128,11 @@ section {
   #mostrar-modal {
     display: none;
   }
+  
   #mostrar-modal + label {
     
     background: rgb(161, 14, 247);
     display: table;
-    margin: auto;
     color: #fff;
     line-height: 3;
     padding: 0 1em;
