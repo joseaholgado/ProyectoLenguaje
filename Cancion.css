@@ -2,7 +2,7 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
-    background-image: url("./escudo3.jpg");
+    background-color: white;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -10,40 +10,40 @@ body {
 header {
     margin: 10px 30%;
     font-style: italic;
-
+    font-weight: bold;
     text-align: center;
     background-color: #003399;
-    color: #FFF;
+    color: #000000;
 }
 
 h1 {
     color: #003399;
-
+    font-weight: bold;
     text-align: center;
 }
 
 h2 {
     text-align: center;
-
+    font-weight: bold;
     color: #003399;
 }
 
 h3::before {
     counter-increment: estrofa;
-
+    font-weight: bold;
     content: "" counter(estrofa) ": ";
 }
 
 h3 {
     text-align: center;
-
+    font-weight: bold;
     color: #003399;
 }
 
 p {
     text-align: center;
-
-    color: #dfe2e8;
+    font-weight: bold;
+    color: #000000;
 }
 
 span {
