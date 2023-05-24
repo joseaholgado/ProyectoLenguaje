@@ -3,7 +3,6 @@ body{
     margin: 0 auto; 
     background-image: url("./escudo2.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
     counter-reset: estrofa verso;
 }
@@ -11,44 +10,44 @@ body{
 header {
     margin: 10px 30%;
     font-style: italic;
-    font-size: 2em;
+    font-size: 1em;
     text-align: center;
-    background-color: #003399; /* Cambia el color de fondo al azul del Málaga */
-    color: #FFF; /* Cambia el color del texto a blanco */
+    background-color: #003399; 
+    color: #FFF; 
 }
 
 h1 {
-    color: #003399; /* Cambia el color del título al azul del Málaga */
-    font-size: 2em;
+    color: #003399; 
+    font-size: 1em;
     text-align: center;  
 }
 
 h2 {
     text-align: center;
-    font-size: 2em;
-    color: #003399; /* Cambia el color del subtítulo al azul del Málaga */
+    font-size: 1em;
+    color: #003399; 
 }
 
 h3::before {
     counter-increment: estrofa;
-    font-size: 2em;
+    font-size: 1em;
     content: "" counter(estrofa) ": ";
 }
 
 h3 {
     text-align: center;
-    font-size: 2em;
-    color: #003399; /* Cambia el color del encabezado de estrofa al azul del Málaga */
+    font-size: 1em;
+    color: #003399; 
 }
 
 p {
     text-align: center;
-    font-size: 2em;
-    color: #003399; /* Cambia el color del texto de párrafo al azul del Málaga */
+    font-size: 1em;
+    color: #dfe2e8; 
 }
 
 span {
-    color: #003399; /* Cambia el color del texto dentro del span al azul del Málaga */
+    color: #819d04; 
     font-size: italic;
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
