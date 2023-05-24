@@ -2,8 +2,6 @@ body {
     width: 85%;
     margin: 0 auto;
     background-image: url("./escudo2.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
     counter-reset: estrofa verso;
 }
 
