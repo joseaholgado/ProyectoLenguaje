@@ -190,3 +190,9 @@ nav a:hover {
     border-radius: 5px;
     z-index: 9999; /* Asegura que el elemento esté en el frente de otros elementos */
   }
+
+  #cerrar-sesion-button {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}

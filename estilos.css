@@ -88,16 +88,6 @@ nav a:hover {
     color: var(--colorFuente);
 }
 
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-  }
-  
-  
-
   /* Aqui centramos el texto y agrandamos letras*/
   #modal p {
     width: 60%;
@@ -191,4 +181,12 @@ section {
     border-radius: 5px;
     z-index: 9999; /* Asegura que el elemento esté en el frente de otros elementos */
   }
+
+  #cerrar-sesion-button {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+
   
