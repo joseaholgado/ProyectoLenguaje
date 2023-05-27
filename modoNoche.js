@@ -96,8 +96,9 @@ function miNombre() {
     } else {
         nombreGuardado = "Sin identificar";
         nombreUsuarioDiv.textContent = nombreGuardado;
+        localStorage.setItem("nombre-usuario", nombreGuardado);
     }
-    localStorage.setItem("nombre-usuario", nombreGuardado);
+   
 }
 
 // Función para restaurar los ajustes guardados en localStorage
@@ -117,15 +118,24 @@ function Restaurar() {
     } else {
         nombreGuardado = "Sin identificar";
         nombreUsuarioDiv.textContent = nombreGuardado;
+        localStorage.setItem("nombre-usuario", nombreGuardado);
     }
-    localStorage.setItem("nombre-usuario", nombreGuardado);
+   
 
     if (colorElegido && tamElegido) {
         // Restaurar los ajustes de fuente y color
         document.documentElement.style.fontSize = parseFloat(tamElegido) + "rem";
         document.documentElement.style.setProperty("--colorNormal", colorElegido);
     }
+   
 }
-
 // Restaurar los ajustes al cargar la página
 Restaurar();
+
+window.addEventListener('beforeunload', function(event) {
+    event.preventDefault(); // Cancelar el cierre de la ventana (necesario para mostrar el mensaje de confirmación en algunos navegadores)
+    cerrarSesion(); // Llamar a la función cerrarSesion() antes de cerrar la ventana
+  });
+
+
+
